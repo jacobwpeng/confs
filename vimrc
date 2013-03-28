@@ -49,8 +49,6 @@ nmap <leader>m :!make<cr>
 nmap <leader>; :tabp<cr>
 nmap <leader>' :tabn<cr>
 nmap <leader>. za
-nmap , <<
-nmap . >>
 imap <Tab> <C-N>
 set pastetoggle=<leader>v
 
