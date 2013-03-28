@@ -50,8 +50,9 @@ nmap <leader>; :tabp<cr>
 nmap <leader>' :tabn<cr>
 nmap <leader>. za
 imap <Tab> <C-N>
+inoremap <c-s> <Esc>:update<CR>
+noremap <c-s> :update<CR>
 set pastetoggle=<leader>v
-
 
 "inoremap <C-F> <C-P>
 "inoremap <C-B> <C-N>
