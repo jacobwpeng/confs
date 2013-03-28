@@ -7,8 +7,6 @@ filetype plugin indent on
 set nocompatible
 set term=color_xterm
 set t_Co=256
-"set nobackup
-"set nowritebackup
 set nu
 set ignorecase
 set autoread
@@ -23,14 +21,12 @@ set ts=4
 set tabstop=4 
 set softtabstop=4 
 set shiftwidth=4 
-"set noexpandtab 
 set expandtab
 set autoindent 
 set cindent
 
 set fdm=indent
 set foldlevelstart=99
-"set backupdir=~/.vimswp
 set dir=~/.vimswp
 set modeline
 set ls=2
@@ -44,18 +40,17 @@ endif
 let mapleader = ","
 let g:mapleader = ","
 
-nmap <leader>w :w!<cr>
-nmap <leader>m :!make<cr>
 nmap <leader>; :tabp<cr>
 nmap <leader>' :tabn<cr>
 nmap <leader>. za
 imap <Tab> <C-N>
-inoremap <c-s> <Esc>:update<CR>
+inoremap <c-s> <Esc>:update<CR>a
 noremap <c-s> :update<CR>
+inoremap <c-q> <Esc>:quit<CR>a
+noremap <c-q> :quit<CR>
 set pastetoggle=<leader>v
 
-"inoremap <C-F> <C-P>
-"inoremap <C-B> <C-N>
+"iab #i #include
 
 "NERDTree
 let NERDTreeWinSize=30
