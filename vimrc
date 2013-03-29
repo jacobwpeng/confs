@@ -2,7 +2,7 @@ call pathogen#infect()
 syntax on
 filetype plugin indent on
 "colorscheme slate
-"colorscheme vividchalk
+colorscheme vividchalk
 "set background=dark
 set nocompatible
 set term=color_xterm
@@ -30,11 +30,11 @@ set foldlevelstart=99
 set dir=~/.vimswp
 set modeline
 set ls=2
-set statusline=%t[%{strlen(&fenc)?&fenc:'none'},%{&ff}]%h%m%r%y%=%c,%l/%L\ %P
-hi StatusLine term=reverse ctermbg=5 ctermfg=0
+set statusline=%*\ %<%F%*[%{strlen(&fenc)?&fenc:'none'},%{&ff}]%h%m%r%y%=%c,%l/%L\ %P
+hi StatusLine term=reverse ctermbg=0 ctermfg=2
 if version >= 700
-  au InsertEnter * hi StatusLine term=reverse ctermbg=5 gui=undercurl guisp=Magenta
-  au InsertLeave * hi StatusLine term=reverse ctermfg=0 ctermbg=2 gui=bold,reverse
+  au InsertEnter * hi StatusLine term=reverse ctermbg=0 ctermfg=5 gui=undercurl guisp=Magenta
+  au InsertLeave * hi StatusLine term=reverse ctermbg=0 ctermfg=2 gui=bold,reverse
 endif
 
 let mapleader = ","
