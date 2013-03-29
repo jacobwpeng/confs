@@ -32,6 +32,9 @@ set modeline
 set ls=2
 set statusline=%*\ %<%F%*[%{strlen(&fenc)?&fenc:'none'},%{&ff}]%h%m%r%y%=%c,%l/%L\ %P
 hi StatusLine term=reverse ctermbg=0 ctermfg=2
+hi TabLineSel ctermfg=46 ctermbg=0
+hi TabLine ctermfg=14 ctermbg=0
+hi TabLineFill ctermfg=14 ctermbg=0
 if version >= 700
   au InsertEnter * hi StatusLine term=reverse ctermbg=0 ctermfg=5 gui=undercurl guisp=Magenta
   au InsertLeave * hi StatusLine term=reverse ctermbg=0 ctermfg=2 gui=bold,reverse
