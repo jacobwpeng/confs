@@ -4,7 +4,7 @@ filetype plugin indent on
 autocmd BufNewFile,BufReadPost *.cpp,*.cc,*.hpp,*.h set filetype=cpp
 autocmd BufNewFile,BufReadPost CMakeLists.txt set filetype=cmake
 "colorscheme slate
-"colorscheme vividchalk
+colorscheme vividchalk
 "set background=dark
 set nocompatible
 set term=color_xterm
@@ -32,11 +32,14 @@ set foldlevelstart=99
 set dir=~/.vimswp
 set modeline
 set ls=2
-set statusline=%t[%{strlen(&fenc)?&fenc:'none'},%{&ff}]%h%m%r%y%=%c,%l/%L\ %P
-hi StatusLine term=reverse ctermbg=5 ctermfg=0
+set statusline=%*\ %<%F%*[%{strlen(&fenc)?&fenc:'none'},%{&ff}]%h%m%r%y%=%c,%l/%L\ %P
+hi StatusLine term=reverse ctermbg=0 ctermfg=2
+hi TabLineSel ctermfg=46 ctermbg=0
+hi TabLine ctermfg=14 ctermbg=0
+hi TabLineFill ctermfg=14 ctermbg=0
 if version >= 700
-  au InsertEnter * hi StatusLine term=reverse ctermbg=5 gui=undercurl guisp=Magenta
-  au InsertLeave * hi StatusLine term=reverse ctermfg=0 ctermbg=2 gui=bold,reverse
+  au InsertEnter * hi StatusLine term=reverse ctermbg=0 ctermfg=5 gui=undercurl guisp=Magenta
+  au InsertLeave * hi StatusLine term=reverse ctermbg=0 ctermfg=2 gui=bold,reverse
 endif
 
 let mapleader = ","
