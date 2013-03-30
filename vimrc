@@ -1,6 +1,8 @@
 call pathogen#infect()
 syntax on
 filetype plugin indent on
+autocmd BufNewFile,BufReadPost *.cpp,*.cc,*.hpp,*.h set filetype=cpp
+autocmd BufNewFile,BufReadPost CMakeLists.txt set filetype=cmake
 "colorscheme slate
 "colorscheme vividchalk
 "set background=dark
