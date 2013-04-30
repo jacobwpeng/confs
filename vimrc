@@ -3,7 +3,6 @@ syntax on
 filetype plugin indent on
 "colorscheme slate
 colorscheme vividchalk
-"set background=dark
 set nocompatible
 set term=color_xterm
 set t_Co=256
