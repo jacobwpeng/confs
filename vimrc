@@ -46,6 +46,7 @@ nmap <leader>; :tabp<cr>
 nmap <leader>' :tabn<cr>
 nmap <leader>. za
 imap <Tab> <C-N>
+imap jj <ESC>
 inoremap <c-s> <Esc>:update<CR>a
 noremap <c-s> :update<CR>
 inoremap <c-q> <Esc>:quit<CR>a
