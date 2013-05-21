@@ -1,8 +1,10 @@
 call pathogen#infect()
-syntax on
-filetype plugin indent on
 "colorscheme slate
 colorscheme vividchalk
+syntax on
+filetype plugin indent on
+set omnifunc=syntaxcomplete#Complete
+
 set nocompatible
 set term=color_xterm
 set t_Co=256
