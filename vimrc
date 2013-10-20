@@ -1,11 +1,18 @@
-call pathogen#infect()
+set nocompatible               " be iMproved
+filetype off                   " required!
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'scrooloose/nerdtree'
+
+filetype plugin indent on     " required!
+
 syntax on
-filetype plugin indent on
 autocmd BufNewFile,BufReadPost *.cpp,*.cc,*.hpp,*.h set filetype=cpp
 autocmd BufNewFile,BufReadPost CMakeLists.txt set filetype=cmake
-colorscheme wombat256mod
-set background=dark
-"colorscheme desert
+"colorscheme molokai 
+colorscheme jellybeans
+"set background=dark
 language en_US.utf8
 set nocompatible
 set term=color_xterm
@@ -51,9 +58,15 @@ inoremap <c-s> <Esc>:update<CR>a
 noremap <c-s> :update<CR>
 inoremap <c-q> <Esc>:quit<CR>a
 noremap <c-q> :quit<CR>
+nnoremap <CR> :noh<CR><CR>
 set pastetoggle=<leader>v
+set autochdir
 
 "iab #i #include
 
 "NERDTree
 let NERDTreeWinSize=30
+
+"ctags
+set tags=./tags;/
+map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
