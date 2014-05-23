@@ -1,17 +1,19 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-Bundle 'scrooloose/nerdtree'
-Bundle 'majutsushi/tagbar'
-Bundle 'bling/vim-airline'
-Bundle 'kien/ctrlp.vim'
-Bundle 'guns/xterm-color-table.vim'
-Bundle 'ChrisKempson/Tomorrow-Theme'
-Bundle 'vim-scripts/OmniCppComplete'
+Plugin 'gmarik/Vundle.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'majutsushi/tagbar'
+Plugin 'bling/vim-airline'
+Plugin 'kien/ctrlp.vim'
+Plugin 'guns/xterm-color-table.vim'
+Plugin 'ChrisKempson/Tomorrow-Theme'
+Plugin 'vim-scripts/OmniCppComplete'
 
+call vundle#end()
 filetype plugin indent on     " required
 
 syntax on
@@ -54,6 +56,7 @@ hi TabLineSel ctermfg=Black ctermbg=214
 hi TabLineFill ctermfg=235 ctermbg=235
 
 set dir=~/.vimswp
+set hidden
 
 let mapleader = ","
 let g:mapleader = ","
@@ -70,6 +73,19 @@ noremap <c-q> :quit<CR>
 nnoremap <CR> :noh<CR><CR>
 nnoremap <S-H> :join <CR>
 set pastetoggle=<leader>v
+
+"for filter search
+cnoremap <C-p> <Up>
+cnoremap <C-n> <Down>
+
+nnoremap <silent> [b :bp<CR>
+nnoremap <silent> ]b :bn<CR>
+nnoremap <silent> [B :bf<CR>
+nnoremap <silent> ]B :bl<CR>
+
+
+"cvim
+let g:C_SourceCodeExtensions  = 'c h cc cp cxx hpp cpp CPP c++ C i ii'
 
 "ctags
 set tags+=./tags;/
@@ -108,8 +124,8 @@ let OmniCpp_MayCompleteArrow = 1 " autocomplete after ->
 let OmniCpp_MayCompleteScope = 1 " autocomplete after ::
 let OmniCpp_DefaultNamespaces = ["std", "fx"]
 set completeopt-=preview
-autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
-autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+"autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
+"autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
 "NerdTree
 nmap <C-n> :NERDTreeToggle<CR>
