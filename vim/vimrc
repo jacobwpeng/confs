@@ -40,6 +40,7 @@ set softtabstop=4
 set shiftwidth=4 
 set expandtab
 set autoindent 
+set autochdir
 set cindent
 
 set encoding=utf8
@@ -83,6 +84,7 @@ nnoremap <silent> ]b :bn<CR>
 nnoremap <silent> [B :bf<CR>
 nnoremap <silent> ]B :bl<CR>
 
+cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 
 "cvim
 let g:C_SourceCodeExtensions  = 'c h cc cp cxx hpp cpp CPP c++ C i ii'
