@@ -12,6 +12,17 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'guns/xterm-color-table.vim'
 Plugin 'ChrisKempson/Tomorrow-Theme'
 Plugin 'vim-scripts/OmniCppComplete'
+Plugin 'WolfgangMehner/vim-plugins'
+Plugin 'uarun/vim-protobuf'
+Plugin 'bling/vim-bufferline'
+Plugin 'tpope/vim-surround'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'xolox/vim-colorscheme-switcher'
+Plugin 'xolox/vim-misc'
+Plugin 'flazz/vim-colorschemes'
+Plugin 'vim-jp/cpp-vim'
+Plugin 'vim-scripts/bufexplorer.zip'
+Plugin 'ervandew/supertab'
 
 call vundle#end()
 filetype plugin indent on     " required
@@ -19,8 +30,9 @@ filetype plugin indent on     " required
 syntax on
 filetype plugin indent on
 language C
-colorscheme Tomorrow-Night
-"set background=dark
+colorscheme Tomorrow-Night-Eighties
+"colorscheme solarized
+"set background=light
 set nocompatible
 set term=color_xterm
 set t_Co=256
@@ -59,13 +71,15 @@ hi TabLineFill ctermfg=235 ctermbg=235
 set dir=~/.vimswp
 set hidden
 
-let mapleader = ","
-let g:mapleader = ","
+"let mapleader = ","
+"let g:mapleader = ","
 
 nmap <leader>; :tabp<cr>
 nmap <leader>' :tabn<cr>
+nmap <leader>] :NextColorScheme<CR>
+nmap <leader>[ :PrevColorScheme<CR>
 nmap <leader>. za
-imap <Tab> <C-N>
+"imap <Tab> <C-N>
 inoremap <c-s> <Esc>:update<CR>a
 inoremap jk <Esc>
 noremap <c-s> :update<CR>
@@ -117,6 +131,9 @@ function! LoadCscope()
 endfunction
 au BufEnter /* call LoadCscope()
 
+filetype plugin on
+set omnifunc=syntaxcomplete#Complete
+
 "omnicppcomplete
 let OmniCpp_ShowScopeInAbbr = 1
 let OmniCpp_ShowAccess = 1
@@ -151,3 +168,16 @@ let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/]\.?(git|hg|svn|build)$',
   \ 'file': '\v\.(d|so)$',
   \ }
+
+set complete=.,w,b,u,t
+
+"bufferline
+let g:bufferline_echo = 0
+
+"copy & past
+set clipboard=unnamed
+
+"on exit
+au VimLeave * :!clear
+"set t_te= t_ti=
+"au VimLeave * :!clear
