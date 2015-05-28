@@ -12,7 +12,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'guns/xterm-color-table.vim'
 Plugin 'ChrisKempson/Tomorrow-Theme'
 Plugin 'vim-scripts/OmniCppComplete'
-Plugin 'WolfgangMehner/vim-plugins'
+"Plugin 'WolfgangMehner/vim-plugins'
 Plugin 'uarun/vim-protobuf'
 Plugin 'bling/vim-bufferline'
 Plugin 'tpope/vim-surround'
@@ -23,6 +23,10 @@ Plugin 'flazz/vim-colorschemes'
 Plugin 'vim-jp/cpp-vim'
 Plugin 'vim-scripts/bufexplorer.zip'
 Plugin 'ervandew/supertab'
+Plugin 'vim-scripts/DoxygenToolkit.vim'
+Plugin 'vim-scripts/vcscommand.vim'
+"Plugin 'Valloric/YouCompleteMe'
+"Plugin 'davidhalter/jedi-vim'
 
 call vundle#end()
 filetype plugin indent on     " required
@@ -30,8 +34,8 @@ filetype plugin indent on     " required
 syntax on
 filetype plugin indent on
 language C
-colorscheme Tomorrow-Night-Eighties
-"colorscheme solarized
+"colorscheme Tomorrow-Night-Eighties
+colorscheme wombat256mod
 "set background=light
 set nocompatible
 set term=color_xterm
@@ -55,7 +59,7 @@ set autoindent
 set autochdir
 set cindent
 
-set encoding=utf8
+set encoding=cp936
 set fileencoding=cp936
 set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
 
@@ -74,11 +78,12 @@ set hidden
 "let mapleader = ","
 "let g:mapleader = ","
 
+map <Space> <leader>
 nmap <leader>; :tabp<cr>
 nmap <leader>' :tabn<cr>
-nmap <leader>] :NextColorScheme<CR>
-nmap <leader>[ :PrevColorScheme<CR>
-nmap <leader>. za
+"nmap <leader>] :NextColorScheme<CR>
+"nmap <leader>[ :PrevColorScheme<CR>
+nmap <leader><Space> za
 "imap <Tab> <C-N>
 inoremap <c-s> <Esc>:update<CR>a
 inoremap jk <Esc>
@@ -88,6 +93,8 @@ noremap <c-q> :quit<CR>
 nnoremap <CR> :noh<CR><CR>
 nnoremap <S-H> :join <CR>
 set pastetoggle=<leader>v
+vnoremap <c-c> :w! /tmp/clipboard.txt <CR>
+inoremap <c-v> <Esc>:read !cat '/tmp/clipboard.txt' <CR> 
 
 "for filter search
 cnoremap <C-p> <Up>
