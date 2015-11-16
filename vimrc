@@ -175,7 +175,7 @@ let g:ctrlp_prompt_mappings = {
   \ }
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/]\.?(git|hg|svn|build)$',
-  \ 'file': '\v\.(d|so)$',
+  \ 'file': '\v\.(d|so|pyc)$',
   \ }
 
 set complete=.,w,b,u,t
@@ -196,6 +196,7 @@ let g:ycm_global_ycm_extra_conf=$HOME . "/.ycm_extra_conf.py"
 let g:ycm_confirm_extra_conf = 0
 let g:ycm_show_diagnostics_ui = 0
 let g:ycm_filepath_completion_use_working_dir = 1
+let g:ycm_key_invoke_completion = '<C-o>'
 
 "clang-format
 autocmd VimEnter * ClangFormatAutoToggle
