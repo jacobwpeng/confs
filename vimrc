@@ -29,6 +29,7 @@ Plugin 'w0ng/vim-hybrid'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'rhysd/vim-clang-format'
+Plugin 'fatih/vim-go'
 
 call vundle#end()
 filetype plugin indent on     " required
@@ -200,3 +201,6 @@ let g:ycm_key_invoke_completion = '<C-o>'
 
 "clang-format
 autocmd VimEnter * ClangFormatAutoToggle
+
+"vim-go
+au FileType go nmap <leader>r <Plug>(go-run)
