@@ -66,7 +66,10 @@ var RULES = [
         ".guokr.com",
         ".speedtest.net",
         ".huazhu.com",
-        ".saraba1st.com"
+        ".saraba1st.com",
+        ".panda.tv",
+        ".douyu.com",
+        ".douyutv.com"
     ],
     //"ihipop"
     [
