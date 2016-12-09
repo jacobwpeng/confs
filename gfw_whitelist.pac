@@ -69,7 +69,9 @@ var RULES = [
         ".saraba1st.com",
         ".panda.tv",
         ".douyu.com",
-        ".douyutv.com"
+        ".douyutv.com",
+        ".zimuzu.tv",
+        ".pdim.gs"
     ],
     //"ihipop"
     [
