@@ -70,7 +70,9 @@ var RULES = [
         ".panda.tv",
         ".douyu.com",
         ".douyutv.com",
-        ".9wka.com"
+        ".9wka.com",
+        ".zimuzu.tv",
+        ".pdim.gs"
     ],
     //"ihipop"
     [
